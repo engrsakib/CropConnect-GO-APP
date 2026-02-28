@@ -197,12 +197,3 @@ Contact: info@engrsakib.com
 ## License
 
 Proprietary — maintained by Md. Nazmus Sakib. For licensing or commercial use, please contact the author.
-
----
-
-If you like, I can also:
-- Provide a production-ready `Dockerfile` and `docker-compose.yml` tailored to this repo,  
-- Add a GitHub Actions workflow (build, lint, test, docker build), or  
-- Scaffold a fully working sample module (geofence) including handler → service → repository → tests.
-
-Tell me which item you'd like next and I will prepare it.

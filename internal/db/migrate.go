@@ -26,6 +26,7 @@ func Migrate(db *gorm.DB) error {
 		&models.Member{},
 		&models.Geofence{},
 		&models.GeofencePoint{},
+		&models.Crop{},
 	)
 
 	if err != nil {

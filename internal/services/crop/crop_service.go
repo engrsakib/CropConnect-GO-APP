@@ -1,16 +1,18 @@
 package cropservice
 
 import (
-	"errors"
-
-	dto "github.com/engrsakib/erp-system/internal/dto/crop"
-	"github.com/engrsakib/erp-system/internal/models"
-	repo "github.com/engrsakib/erp-system/internal/repository/crop"
+    dto "github.com/engrsakib/erp-system/internal/dto/crop"
+    "github.com/engrsakib/erp-system/internal/models"
+    repo "github.com/engrsakib/erp-system/internal/repository/crop"
 )
 
 type CropService interface {
     CreateCrop(farmerID uint, req dto.CreateCropRequest) (*models.Crop, error)
-    UpdateStock(cropID uint, req dto.UpdateStockRequest) (*models.Crop, error)
+    UpdateCrop(id uint, req dto.CreateCropRequest) (*models.Crop, error)
+    UpdateStock(id uint, req dto.UpdateStockRequest) (*models.Crop, error)
+    DeleteCrop(id uint) error
+    GetCropByID(id uint) (*models.Crop, error)
+    GetAllCrops() ([]models.Crop, error)
 }
 
 type cropService struct {
@@ -18,31 +20,23 @@ type cropService struct {
 }
 
 func NewCropService(r repo.CropRepository) CropService {
-    return &cropService{r}
+    return &cropService{repo: r}
 }
 
-func (s *cropService) CreateCrop(farmerID uint, req dto.CreateCropRequest) (*models.Crop, error) {
-    crop := &models.Crop{
-        FarmerID:    farmerID,
-        Name:        req.Name,
-        Category:    req.Category,
-        Description: req.Description,
-        ImageURL:    req.ImageURL,
-        PricePerKg:  req.PricePerKg,
-        StockKg:     req.StockKg,
-    }
 
-    err := s.repo.Create(crop)
-    return crop, err
+
+
+
+
+
+func (s *cropService) DeleteCrop(id uint) error {
+    return s.repo.Delete(id)
 }
 
-func (s *cropService) UpdateStock(cropID uint, req dto.UpdateStockRequest) (*models.Crop, error) {
-    crop, err := s.repo.FindByID(cropID)
-    if err != nil {
-        return nil, errors.New("crop not found")
-    }
+func (s *cropService) GetCropByID(id uint) (*models.Crop, error) {
+    return s.repo.FindByID(id)
+}
 
-    crop.StockKg = req.StockKg
-    err = s.repo.Update(crop)
-    return crop, err
+func (s *cropService) GetAllCrops() ([]models.Crop, error) {
+    return s.repo.FindAll()
 }

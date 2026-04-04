@@ -48,6 +48,7 @@ func NewRouter(db *gorm.DB, rdb *redis.Client) *gin.Engine {
 		RegisterGeofenceRoutes(v1, db)
 		RegisterGeofencePointRoutes(v1, db)
 		RegisterCropRoutes(v1, db)
+		RegisterOrderRoutes(v1, db)
 	}
 
 	return r

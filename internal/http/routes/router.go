@@ -23,7 +23,7 @@ func NewRouter(db *gorm.DB, rdb *redis.Client) *gin.Engine {
 
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "Welcome to ERP System API - Go Backend with Gin, GORM, PostgreSQL, Redis and JWT Authentication! 🚀 Developed by Md. Nazmus Sakib {engrsakib}",
+			"message": "Welcome to CropConnect - Go Backend with Gin, GORM, PostgreSQL, Redis and JWT Authentication! 🚀 Developed by Maysha Tabbsum",
 			"status":  "active",
 			"docs":    "https://astraerp-go-backend.onrender.com/swagger/index.html",
 		})

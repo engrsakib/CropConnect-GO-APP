@@ -1,10 +1,10 @@
 # AstraERP — Modular ERP Backend
 
-[![Go](https://img.shields.io/badge/Go-1.20-blue?logo=go&logoColor=white)](https://golang.org/) [![GORM](https://img.shields.io/badge/GORM-1.x-0f172a?style=flat&logo=go&logoColor=white)](https://gorm.io/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Swagger](https://img.shields.io/badge/Swagger-swag-blue)](https://github.com/swaggo/swag)
+[![Go](https://img.shields.io/badge/Go-1.20-blue?logo=go&logoColor=white)](https://golang.org/) [![GORM](https://img.shields.io/badge/GORM-1.x-0f172a?style=flat&logo=go&logoColor=white)](https://gorm.io/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Swagger](https://img.shields.io/badge/Swagger-swag-blue)](https://github.com/swaggo/swag) [![Docker](https://img.shields.io/badge/Docker-24.0-blue?logo=docker&logoColor=white)](https://www.docker.com/) [![Redis](https://img.shields.io/badge/Redis-6.2-orange?logo=redis&logoColor=white)](https://redis.io/) [![Gin](https://img.shields.io/badge/Gin-Gonic-00ADD8?logo=gin&logoColor=white)](https://github.com/gin-gonic/gin)
 
 AstraERP is a production-ready, modular backend for enterprise resource planning (ERP) systems. Built with Go, Gin and GORM, AstraERP is designed around clean architecture, testability and operational readiness — Postgres/PostGIS compatible.
 
-Version: v9 — polished, comprehensive README with folder structure, environment guidelines, Docker & deployment notes, and best practices.
+Version: v1 — polished, comprehensive README with folder structure, environment guidelines, Docker & deployment notes, and best practices.
 
 ---
 
@@ -190,18 +190,10 @@ docker build -t astraerp:latest .
 
 Md. Nazmus Sakib — Backend Engineer  
 Repository: https://github.com/engrsakib/astraERP-GO-Backend  
+Documentation: https://astraerp-go-backend.onrender.com/swagger/index.html
 Website / Portfolio: https://engrsakib.com  
 Contact: info@engrsakib.com
 
 ## License
 
 Proprietary — maintained by Md. Nazmus Sakib. For licensing or commercial use, please contact the author.
-
----
-
-If you like, I can also:
-- Provide a production-ready `Dockerfile` and `docker-compose.yml` tailored to this repo,  
-- Add a GitHub Actions workflow (build, lint, test, docker build), or  
-- Scaffold a fully working sample module (geofence) including handler → service → repository → tests.
-
-Tell me which item you'd like next and I will prepare it.

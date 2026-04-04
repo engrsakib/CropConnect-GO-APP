@@ -1,14 +1,16 @@
 package models
 
-import ("time"
-"gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
 )
 
 const (
-    UserTypeSuperAdmin = 0 // super Admin: most powerful user
-    UserTypeManager    = 1 // Manager: 
-    UserTypeAdmin      = 2 // Admin (Subscriber): subcriber level admin
-    UserTypeUser       = 3 // Regular User: default user type
+    UserTypeSuperAdmin = 0 // super Admin: has all permissions, can manage all aspects of the system
+    UserTypeFarmer    = 1 // Farmer: user who can manage their own farm and products
+    UserTypeAdmin      = 2 // Admin (Subscriber): user who can manage their own farm and products, and also has some administrative permissions
+    UserTypeCustomer   = 3 // Regular User: user who can browse products, place orders, and manage their own profile
 )
 
 type User struct {
